@@ -4,12 +4,18 @@ phases:
   install:
     runtime-versions:
       python: 3.12
+    commands:
+      - echo "Install phase complete"
   pre_build:
     commands:
-      - echo "Starting build..."
+      - echo "Pre-build phase complete"
   build:
     commands:
-      - echo "Build started successfully"
+      - echo "Build phase complete"
   post_build:
     commands:
-      - echo "Build completed"
+      - echo "Post-build phase complete"
+
+artifacts:
+  files:
+    - '**/*'
