@@ -2,13 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/app
+    destination: /home/ubuntu/aws-devops-pgp
 hooks:
-  AfterInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: scripts/start_gunicorn.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
