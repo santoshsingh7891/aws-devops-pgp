@@ -1,1 +1,15 @@
-- echo "Hello World"
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+  pre_build:
+    commands:
+      - echo "Starting build..."
+  build:
+    commands:
+      - echo "Build started successfully"
+  post_build:
+    commands:
+      - echo "Build completed"
